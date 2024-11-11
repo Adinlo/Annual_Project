@@ -3,13 +3,14 @@ const routes = [
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/IndexPage.vue') },
-      { path: '/login', component: () => import('pages/Login.vue') },
-      { path: '/signup', component: () => import('pages/Signup.vue') },
-      { path: '/user', component: () => import('pages/User.vue') },
-      { path: '/workspace', component: () => import('pages/Workspace.vue') },
-       { path: '/docs', component: () => import('pages/Docs.vue') },
-      { path: '/dashboard', component: () => import('pages/Dashboard.vue') },
+      // { path: '', component: () => import('pages/IndexPage.vue') },
+      { path: '', component: () => import('pages/DashboarPage.vue') },
+      { path: 'test', component: () => import('pages/TestPage.vue') },
+      { path: '/user', component: () => import('pages/UserPage.vue') },
+      { path: 'workspace', component: () => import('pages/WorkspacePage.vue') },
+
+
+ 
     ]
   },
 

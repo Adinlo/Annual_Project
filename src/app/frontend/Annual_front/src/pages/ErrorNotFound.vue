@@ -1,18 +1,19 @@
 <template>
-  <div class="fullscreen bg-blue text-white text-center q-pa-md flex flex-center">
+  <div class="fullscreen bg-red text-white text-center q-pa-md flex flex-center">
     <div>
       <div style="font-size: 30vh">
-        404
+        404  DAMMMIT !!!
+
       </div>
 
-      <div class="text-h2" style="opacity:.4">
-        Oops. Nothing here...
-      </div>
+      <!-- <div class="text-h1" style="opacity:.4; color: red; ">
+        DAMMMIT !!!
+      </div> -->
 
       <q-btn
         class="q-mt-xl"
         color="white"
-        text-color="blue"
+        text-color="red"
         unelevated
         to="/"
         label="Go Home"

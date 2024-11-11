@@ -1,16 +1,16 @@
-<!-- src/pages/User.vue -->
 <template>
     <q-page class="q-pa-md">
-      <q-card>
+      <q-card class="q-mb-md">
         <q-card-section>
-          <h2>Mon profil</h2>
+          <h2>Inscription</h2>
         </q-card-section>
         <q-card-section>
           <q-input v-model="name" label="Nom" />
-          <q-input v-model="email" label="Email" type="email" readonly />
+          <q-input v-model="email" label="Email" type="email" />
+          <q-input v-model="password" label="Mot de passe" type="password" />
         </q-card-section>
         <q-card-actions align="right">
-          <q-btn label="Mettre à jour" color="primary" @click="updateProfile" />
+          <q-btn label="S'inscrire" color="secondary" @click="signup" />
         </q-card-actions>
       </q-card>
     </q-page>
@@ -18,16 +18,17 @@
   
   <script>
   export default {
-    name: "UserPage",
+    name: "SignupPage",
     data() {
       return {
-        name: "Nom utilisateur",
-        email: "email@exemple.com",
+        name: "",
+        email: "",
+        password: "",
       };
     },
     methods: {
-      updateProfile() {
-        // Logique de mise à jour du profil
+      signup() {
+        // blabla
       },
     },
   };
