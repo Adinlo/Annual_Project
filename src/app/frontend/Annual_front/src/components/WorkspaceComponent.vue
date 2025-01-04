@@ -1,4 +1,5 @@
 <template>
+  <q-page>
   <q-card class="workspace-card">
     <q-card-section class="workspace-header">
       <div class="text-h5">Gestion des Workspaces</div>
@@ -36,6 +37,7 @@
       </q-list>
     </q-card-section>
   </q-card>
+</q-page>
 </template>
 
 <script>
@@ -72,12 +74,17 @@ export default {
 </script>
 
 <style scoped>
+
+.q-page {
+background-color: #92c5f8;
+}
+
 .workspace-card {
   background-color: #f7f9fb;
   border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
   max-width: 600px;
-  margin: 50px auto;
+  margin: 0px auto;
   overflow: hidden;
 }
 

@@ -1,4 +1,5 @@
 <template>
+  <q-page>
   <q-card class="card">
     <div class="dash_center q-pa-md">
       <div class="text-h5 q-pa-md animated fadeIn">Tableau de Bord</div>
@@ -17,6 +18,7 @@
       </div>
     </div>
   </q-card>
+</q-page>
 </template>
 
 <script>
@@ -28,7 +30,8 @@ export default {
       { label: 'Workspaces', route: '/workspace', icon: 'workspaces' },
       { label: 'Connexion', route: '/connexion', icon: 'login' },
       { label: 'Documents', route: '/documents', icon: 'folder' },
-      { label: 'RaggyChat', route: '/chatbot', icon: 'smart_toy' }
+      { label: 'RaggyChat', route: '/chatbot', icon: 'smart_toy' },
+      // { label: 'Sign', route: '/signup', icon: 'smart_toy' },
     ];
     const isLoading = false; 
 
@@ -38,6 +41,7 @@ export default {
 </script>
 
 <style scoped>
+
 .dash_center {
   display: flex;
   flex-direction: column;
@@ -46,6 +50,9 @@ export default {
   min-height: 100px;
   text-align: center;
   margin-right: auto;
+}
+.q-page {
+background-color: #92c5f8;
 }
 
 .card {
@@ -58,12 +65,12 @@ export default {
   margin: 0 auto;
   background-color: #abf1ec;
   border-radius: 50px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .text-h5 {
   font-weight: 600;
-  color: #2c3e50;
+  color: #182027;
   margin-bottom: 20px;
 }
 

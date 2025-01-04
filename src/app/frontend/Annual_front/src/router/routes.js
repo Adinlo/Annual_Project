@@ -12,6 +12,7 @@ const routes = [
       { path: '/test', component: () => import('components/HelloComponent.vue') },
       { path: '/user', component: () => import('components/UserComponent.vue') },
       { path: '/connexion', component: () => import('components/ConnexionComponent.vue') },
+      { path: '/signup', component: () => import('components/SignupComponent.vue') },
       { path: '/workspace', component: () => import('components/WorkspaceComponent.vue') },
       { path: '/documents', component: () => import('components/DocumentComponent.vue') },
       { path: '/chatbot', component: () => import('components/ChatComponent.vue') },

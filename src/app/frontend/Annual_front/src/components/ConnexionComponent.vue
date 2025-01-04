@@ -3,8 +3,8 @@
     <q-page-container>
       <q-page class="flex flex-center">
         <q-card flat bordered class="q-pa-md q-mt-lg login-card">
-          <q-card-section class="text-center">
-            <div class="text-h6 animated fadeIn">Connexion</div>
+          <q-card-section class="connexion-header">
+            <div class="text-h6 text-center">Connexion </div>
           </q-card-section>
 
           <q-card-section>
@@ -18,7 +18,7 @@
                 dense
                 :error="!!emailError"
                 :error-message="emailError"
-                class="login-input"
+                class="input-field"
               />
 
               <q-input
@@ -28,14 +28,14 @@
                 outlined
                 clearable
                 dense
-                class="login-input q-mt-md"
+                class="q-mt-md input-field"
               />
 
               <q-btn
                 type="submit"
                 label="Se connecter"
                 color="primary"
-                class="submit-btn full-width"
+                class="login-btn full-width"
               />
             </q-form>
           </q-card-section>
@@ -56,11 +56,13 @@
 </template>
 
 <script>
+import { useRouter } from 'vue-router'; 
 import { ref } from 'vue';
 
 export default {
   name: "ConnexionComponent",
   setup() {
+    const router = useRouter();
     const email = ref('');
     const password = ref('');
     const emailError = ref('');
@@ -87,12 +89,13 @@ export default {
       }
 
       if (formRef.value.validate()) {
-        console.log('Connexion réussie avec :', email.value, password.value);
+        console.log('Connexion réussie avec :', email.value, password.value); // Back en attente
       }
     };
 
     const redirectToSignup = () => {
-      console.log('Redirection vers la page de création de compte...');
+      // console.log('Redirection vers la page de création de compte...');
+      router.push('/signup');
     };
 
     return {
@@ -108,69 +111,72 @@ export default {
 </script>
 
 <style scoped>
-.login-card {
-  background-color: #f7f9fb;
-  border-radius: 20px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
-  margin: 100px auto;
-  transition: transform 0.3s ease;
+
+.q-page {
+background-color: #92c5f8;
 }
 
-.login-card:hover {
-  transform: translateY(-10px);
+.login-card {
+  background-color: #fbf9f7;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  max-width: 400px;
+  width: 100%;
+  padding: 30px;
+  overflow: hidden;
+}
+
+.connexion-header {
+  background-color: #2196F3;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 15px 15px 0 0;
 }
 
 .text-h6 {
-  color: #2196F3;
   font-weight: 600;
+  color: #f7f9fb;
+  margin-bottom: 20px;
 }
 
-.login-input {
+.input-field {
   transition: all 0.3s ease;
 }
 
-.login-input:focus {
-  box-shadow: 0 0 5px rgba(33, 150, 243, 0.6);
+.input-field:focus-within {
+  border-color: #2196f3;
 }
 
-.submit-btn {
-  transition: transform 0.3s ease, background-color 0.3s ease;
+.login-btn {
+  transition: all 0.3s ease;
 }
 
-.submit-btn:hover {
+.login-btn:hover {
   transform: scale(1.05);
-  background-color: #1976D2;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: #1976d2;
+  box-shadow: 0 4px 15px rgba(25, 118, 210, 0.5);
 }
 
 .signup-btn {
-  color: #2196F3;
-  font-weight: bold;
   transition: color 0.3s ease;
 }
 
 .signup-btn:hover {
-  color: #1976D2;
+  color: #1976d2;
 }
 
-.animated {
-  animation-duration: 0.5s;
-  animation-timing-function: ease-out;
+.q-card-actions {
+  margin-top: 20px;
 }
 
-.fadeIn {
-  animation-name: fadeIn;
+.q-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.q-card-section {
+  padding: 10px 0;
 }
 </style>

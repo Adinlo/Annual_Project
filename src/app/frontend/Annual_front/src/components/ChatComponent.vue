@@ -35,7 +35,7 @@
       const sendMessage = () => {
         if (userMessage.value.trim()) {
           messages.value.push({ text: userMessage.value, sent: true });
-          userMessage.value = '';  // Clear input field
+          userMessage.value = ''; 
         }
       };
   
@@ -49,7 +49,12 @@
   </script>
   
   <style scoped>
+  .q-page {
+  background-color: #92c5f8;
+  }
+
   .chat-container {
+    background-color: white;
     width: 100%;
     max-width: 500px;
     height: 400px;
