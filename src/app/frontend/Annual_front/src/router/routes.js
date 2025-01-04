@@ -14,7 +14,7 @@ const routes = [
       { path: '/connexion', component: () => import('components/ConnexionComponent.vue') },
       { path: '/workspace', component: () => import('components/WorkspaceComponent.vue') },
       { path: '/documents', component: () => import('components/DocumentComponent.vue') },
-      // { path: '/chatbot', component: () => import('components/ChatComponent.vue') },
+      { path: '/chatbot', component: () => import('components/ChatComponent.vue') },
 
 
     ]
